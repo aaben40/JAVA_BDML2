@@ -17,23 +17,29 @@ public class Exo2 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int nb = 0;
+        int nb;
         int result;
         int ind;
+
         Scanner sc = new Scanner(System.in);
-        System.out.println("Entrer nombre");
-        ind=sc.nextInt();
-        result=0;
-        
-        
-        while(result <= ind){
-            result=result+nb;
-        
+
+        System.out.println("\n Entrer le nombre :");
+        nb = sc.nextInt();
+
+        result = 0;
+
+        // Addition des nb premiers entiers
+        ind = 1;
+        while (ind <= nb) {
+            result = result + ind;
+            ind++;
         }
-        
+
+        // Affichage du résultat
         System.out.println();
-        System.out.println("La somme des " + nb + "entiers est: "+result);
+        System.out.println("La somme des " + nb + " entiers est : " + result);
+
+        sc.close();
         }
     }
     
-}
